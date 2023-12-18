@@ -1,5 +1,13 @@
 # mini-minecraft
 ## Features
+
+### Multi-threading for real-time terrian generation
+- terrain expansion, seeing surrounding 5x5 terrain zones to check if they have set up blocks.
+- destory the VBO Data when moving far enough, But the Chunk data is kept,destroy all VBO data when walk too far away for efficiency.
+- For the current terrian zone, if no Chunk then generated it If has Chunk but no VBOData inside, fill the VBOData
+- last step to fill data and send to GPU
+- difficulties: design and code
+  
 ### Procedural generation of terrain using noise functions
 - Implemented several noise functions to generate the terrain procedurally, including Perlin, Worley, and FBM.
 - Using Perlin Noise with FBM to generate the height of the mountain and the grassland biome.
@@ -28,14 +36,6 @@
 - make empty blocks under a certain layer of lava
 - set up framebuffer and shader programs for posteffects
 - programmed post shaders to make visual effects for under water and under lava
-
-### Multi-threading for real-time terrian generation
-- terrain expansion, seeing surrounding 5x5 terrain zones to check if they have set up blocks.
-- destory the VBO Data when moving far enough, But the Chunk data is kept,destroy all VBO data when walk too far away for efficiency.
-- For the current terrian zone, if no Chunk then generated it If has Chunk but no VBOData inside, fill the VBOData
-- last step to fill data and send to GPU
-- difficulties: design and code
-
 
 ### Additional Biomes
 - Add additional biomes like SNOWPEAK, MUSHLAND, DARKFOREST, OAKFOREST, DESERT
